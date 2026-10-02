@@ -63,6 +63,16 @@
   }
   .hero h1 { font-size: clamp(2rem, 6vw, 3.5rem); font-weight: 700; line-height: 1.15; }
   .hero-sub { margin-top: 1.25rem; color: var(--muted); font-size: 1.05rem; max-width: 36rem; }
+  .pcd-badge {
+    display: inline-flex; align-items: center;
+    margin-top: 1rem;
+    font-size: .7rem; font-weight: 700; letter-spacing: .12em;
+    text-transform: uppercase; color: var(--lime);
+    background: rgba(205,255,78,.08);
+    border: 1px solid rgba(205,255,78,.25);
+    border-radius: 999px;
+    padding: .35rem .9rem;
+  }
 
   /* ── FOTO ── */
   .profile-photo {
@@ -215,6 +225,78 @@
   .btn-outline-sm:hover { border-color: var(--lime); }
 
   .label-lime { font-size: .875rem; font-weight: 600; color: var(--lime); margin-top: 1rem; margin-bottom: .25rem; }
+
+  /* PROJETO TSE */
+  .proj-tse {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 2rem 2.25rem;
+    box-shadow: 0 18px 50px -20px rgba(10,10,20,.8);
+    transition: border-color .2s;
+  }
+  .proj-tse:hover { border-color: var(--purple); }
+  .proj-tse__head h2 {
+    font-size: clamp(1.15rem, 3vw, 1.5rem);
+    font-weight: 700; color: var(--fg); margin-bottom: .5rem;
+  }
+  .proj-tse__sub {
+    color: var(--muted); font-size: .95rem; font-style: italic;
+    line-height: 1.55; margin-bottom: 1.25rem;
+  }
+  .proj-tse__data {
+    font-size: .8rem; color: var(--muted); line-height: 1.7;
+    background: rgba(255,255,255,.03);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: .85rem 1rem;
+    margin-bottom: 1.75rem;
+  }
+  .proj-tse__data strong { color: var(--fg); }
+  .proj-tse__data span { opacity: .8; }
+  .proj-tse__num {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-bottom: .5rem;
+  }
+  .proj-tse__num > div {
+    background: rgba(255,255,255,.03);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1rem 1.25rem;
+    text-align: center;
+  }
+  .proj-tse__num strong { display: block; font-size: 1.6rem; font-weight: 800; color: var(--lime); }
+  .proj-tse__num span {
+    display: block; font-size: .72rem; color: var(--muted);
+    margin-top: .25rem; text-transform: uppercase; letter-spacing: .04em;
+  }
+  .proj-tse h3 { font-size: 1rem; font-weight: 700; color: var(--fg); margin: 1.75rem 0 1rem; }
+  .proj-tse__lista { list-style: none; display: flex; flex-direction: column; gap: 1.1rem; }
+  .proj-tse__lista li {
+    font-size: .9rem; line-height: 1.7; color: var(--muted);
+    border-left: 3px solid var(--lime); padding-left: 1rem;
+  }
+  .proj-tse__lista li strong { color: var(--fg); display: block; margin-bottom: .2rem; }
+  .proj-tse > p { font-size: .9rem; line-height: 1.75; color: var(--muted); }
+  .proj-tse__tags { display: flex; flex-wrap: wrap; gap: .5rem; margin: 1.5rem 0; }
+  .proj-tse__tags span {
+    font-size: .75rem; font-weight: 600;
+    background: rgba(101,88,254,.15); color: var(--lime);
+    border: 1px solid rgba(101,88,254,.3);
+    border-radius: 999px; padding: .25rem .75rem;
+  }
+  .proj-tse__nota { font-size: .85rem; color: var(--muted); line-height: 1.75; }
+  .proj-tse__links {
+    display: flex; gap: 1.5rem; flex-wrap: wrap;
+    margin-top: 1.5rem; padding-top: 1.25rem;
+    border-top: 1px solid var(--border);
+  }
+  .proj-tse__links a {
+    color: var(--lime); font-weight: 600; font-size: .85rem; text-decoration: none;
+  }
+  .proj-tse__links a:hover { text-decoration: underline; }
   .list { list-style: none; font-size: .875rem; color: var(--muted); display: flex; flex-direction: column; gap: .2rem; }
   .list-cols { list-style: none; font-size: .875rem; color: var(--muted); display: flex; flex-direction: column; gap: .2rem; }
 
@@ -286,6 +368,40 @@
   }
   .research-contributions .icon-box { margin-bottom: 0; flex-shrink: 0; }
 
+  /* EXPERIENCIA PROFISSIONAL */
+  .exp-list { display: flex; flex-direction: column; gap: 1.5rem; }
+  .exp-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.75rem 2rem;
+    box-shadow: 0 18px 50px -20px rgba(10,10,20,.8);
+    transition: border-color .2s;
+  }
+  .exp-card:hover { border-color: var(--purple); }
+  .exp-card__top {
+    display: flex; justify-content: space-between; align-items: baseline;
+    flex-wrap: wrap; gap: .4rem .75rem; margin-bottom: .9rem;
+  }
+  .exp-card__role { font-size: 1.05rem; font-weight: 700; color: var(--fg); }
+  .exp-card__company { color: var(--purple); font-weight: 600; font-size: .85rem; }
+  .exp-card__dates { font-size: .8rem; color: var(--muted); white-space: nowrap; }
+  .exp-card ul { list-style: none; display: flex; flex-direction: column; gap: .4rem; }
+  .exp-card li {
+    font-size: .875rem; color: var(--muted); line-height: 1.6;
+    padding-left: 1rem; position: relative;
+  }
+  .exp-card li::before { content: "•"; position: absolute; left: 0; color: var(--lime); }
+  .exp-card__result {
+    font-size: .85rem; color: var(--fg); line-height: 1.6;
+    background: rgba(205,255,78,.05);
+    border: 1px solid rgba(205,255,78,.15);
+    border-radius: 10px;
+    padding: .9rem 1.1rem;
+    margin-top: 1rem;
+  }
+  .exp-card__result strong { color: var(--lime); }
+
   /* ── CONTACTS ── */
   .contact-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
   .contact-card {
@@ -342,6 +458,7 @@
           <p class="hero-eyebrow" data-i18n="hero-eyebrow">Analista de Dados</p>
           <h1><span class="lime">Fabiola</span> Gremski Mika</h1>
           <p class="hero-sub" data-i18n="hero-sub">Mestranda em Administração e Analista de Dados em formação. Desenvolvo dashboards em Power BI, análises com Python e SQL, transformando dados em informações para apoiar a tomada de decisão.</p>
+          <p class="pcd-badge" data-i18n="pcd-badge">PCD &middot; Visão monocular</p>
           <a href="#sobre-mim" class="btn btn-lime" id="btn-about">
             <span data-i18n="btn-about">Sobre mim</span> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
           </a>
@@ -358,10 +475,13 @@
       <h2 class="section-title"><span class="lime">| </span><span data-i18n="about-title">Sobre mim</span></h2>
       <p style="color:var(--fg)" data-i18n="about-welcome">Seja muito bem-vindo(a) ao meu portfólio. Conheça a minha trajetória.</p>
       <p class="about-text">
-        <span class="about-highlight">5+</span>
-        <span data-i18n="about-p1">anos de experiência profissional em operações digitais, e-commerce, análise de indicadores e gestão de processos. Atualmente, sou mestranda em Administração pela PUCPR e estou em transição para a área de Dados, desenvolvendo projetos em Power BI, Python e SQL voltados à análise de negócios e apoio à tomada de decisão.</span>
+        <span class="about-highlight">6+</span>
+        <span data-i18n="about-p1">anos de experiência profissional em análise de dados, operações digitais, e-commerce e relacionamento com clientes. Atualmente, sou pesquisadora de mestrado bolsista CAPES na PUCPR e estou em transição para a área de Dados, desenvolvendo projetos em Power BI, Python e SQL voltados à análise de negócios e apoio à tomada de decisão.</span>
       </p>
       <p class="about-text" data-i18n="about-p2">Minha experiência combina visão estratégica, capacidade analítica e pesquisa acadêmica, permitindo transformar dados em insights relevantes para empresas e organizações.</p>
+
+      <p class="label-lime" data-i18n="formacao-title">Formação acadêmica</p>
+      <ul class="list" data-i18n="formacao-list"><li>• Mestrado em Administração (Marketing) — PUCPR, em andamento</li><li>• MBA em Ciência de Dados e Inteligência Artificial — Uninter, 2026</li><li>• Bacharelado em Administração — Unisecal, 2023</li></ul>
     </section>
   
     <section class="section">
@@ -374,14 +494,80 @@
         </article>
         <article class="card skill-card">
           <div class="icon-box "><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
-          <h3>Python e SQL</h3>
-          <p class="muted" data-i18n="skill-python">Manipulação, limpeza e análise de dados utilizando Python, SQL e bibliotecas voltadas para análise exploratória e automação de processos.</p>
+          <h3 data-i18n="skill-python-title">Python, SQL e Git</h3>
+          <p class="muted" data-i18n="skill-python">Manipulação, limpeza e análise de dados utilizando Python e SQL (SELECT, JOIN, GROUP BY), com controle de versão de projetos via Git e GitHub.</p>
         </article>
         <article class="card skill-card">
           <div class="icon-box "><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M6 18h8"/><path d="M3 22h18"/><path d="M14 22a7 7 0 1 0 0-14h-1"/><path d="M9 14h2"/><path d="M9 12a2 2 0 0 1-2-2V6h6v4a2 2 0 0 1-2 2Z"/><path d="M12 6V3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3"/></svg></div>
           <h3 data-i18n="skill-research-title">Pesquisa e Analytics</h3>
           <p class="muted" data-i18n="skill-research">Aplicação de métodos quantitativos, análise de comportamento do consumidor e desenvolvimento de pesquisas acadêmicas baseadas em evidências.</p>
         </article>
+      </div>
+    </section>
+  
+        <section id="experiencia" class="section">
+      <h2 class="section-title"><span class="lime">| </span><span data-i18n="exp-title">Experiência Profissional</span></h2>
+      <div class="exp-list">
+
+        <article class="exp-card">
+          <div class="exp-card__top">
+            <div>
+              <span class="exp-card__role" data-i18n="exp1-role">Pesquisadora de Mestrado (Bolsista CAPES)</span>
+              <span class="exp-card__company" data-i18n="exp1-company"> · PUCPR</span>
+            </div>
+            <span class="exp-card__dates" data-i18n="exp1-dates">04/2025 – Atual</span>
+          </div>
+          <ul data-i18n="exp1-list">
+            <li>Pesquisa quantitativa e qualitativa aplicada ao comportamento do consumidor</li>
+            <li>Estruturação e tratamento de bases de dados para análises estatísticas</li>
+            <li>Elaboração de relatórios técnicos e apresentações de resultados</li>
+          </ul>
+        </article>
+
+        <article class="exp-card">
+          <div class="exp-card__top">
+            <div>
+              <span class="exp-card__role" data-i18n="exp2-role">Gestora de E-commerce</span>
+              <span class="exp-card__company" data-i18n="exp2-company"> · FGM Empreendimentos Digitais</span>
+            </div>
+            <span class="exp-card__dates" data-i18n="exp2-dates">05/2022 – 01/2024</span>
+          </div>
+          <ul data-i18n="exp2-list">
+            <li>Análise de indicadores comerciais e operacionais de e-commerce</li>
+            <li>Consolidação de dados de diferentes sistemas para relatórios gerenciais</li>
+            <li>Monitoramento de KPIs de vendas, atendimento e logística</li>
+          </ul>
+        </article>
+
+        <article class="exp-card">
+          <div class="exp-card__top">
+            <div>
+              <span class="exp-card__role" data-i18n="exp3-role">Coordenadora de CRC (Relacionamento com Clientes)</span>
+              <span class="exp-card__company" data-i18n="exp3-company"> · Metta Distribuidora</span>
+            </div>
+            <span class="exp-card__dates" data-i18n="exp3-dates">05/2021 – 04/2022</span>
+          </div>
+          <ul data-i18n="exp3-list">
+            <li>Administração de dados em CRM, com controle de qualidade das informações</li>
+            <li>Acompanhamento de KPIs para avaliação de desempenho e evolução de processos</li>
+          </ul>
+          <p class="exp-card__result" data-i18n="exp3-result"><strong>Resultado:</strong> implementação da Central de Relacionamento, com aumento estimado de 10% nas vendas por telefone e WhatsApp.</p>
+        </article>
+
+        <article class="exp-card">
+          <div class="exp-card__top">
+            <div>
+              <span class="exp-card__role" data-i18n="exp4-role">Estagiária Administrativa</span>
+              <span class="exp-card__company" data-i18n="exp4-company"> · Metta Distribuidora</span>
+            </div>
+            <span class="exp-card__dates" data-i18n="exp4-dates">07/2020 – 05/2021</span>
+          </div>
+          <ul data-i18n="exp4-list">
+            <li>Gestão de cadastros e registros administrativos</li>
+            <li>Alimentação de sistemas internos e planilhas com dados de rotinas administrativas</li>
+          </ul>
+        </article>
+
       </div>
     </section>
   
@@ -438,6 +624,105 @@
             </div>
           </div>
         </article>
+        <!-- ===== PROJETO: CONCENTRAÇÃO DE RECURSOS ===== -->
+<section class="proj-tse">
+
+  <div class="proj-tse__head">
+    <h2>Concentração de recursos nas campanhas de 2026</h2>
+    <p class="proj-tse__sub">
+      Análise descritiva do financiamento das candidaturas a partir
+      dos dados abertos do TSE
+    </p>
+
+    <p class="proj-tse__data">
+      <strong>Coleta:</strong> 17/09/2026 &nbsp;·&nbsp;
+      <strong>Período coberto:</strong> prestação de contas parcial até 08/09/2026
+      <br>
+      <span>Data de geração registrada no próprio arquivo do TSE (campo DT_GERACAO)</span>
+    </p>
+  </div>
+
+  <div class="proj-tse__num">
+    <div>
+      <strong>20.060</strong>
+      <span>candidaturas analisadas</span>
+    </div>
+    <div>
+      <strong>833 mil</strong>
+      <span>registros de receita e despesa</span>
+    </div>
+    <div>
+      <strong>0,76</strong>
+      <span>Gini da arrecadação</span>
+    </div>
+  </div>
+
+  <h3>Resultados</h3>
+  <ul class="proj-tse__lista">
+    <li>
+      <strong>Distribuição dos recursos.</strong>
+      Entre as candidaturas a deputado federal, os 10% que mais arrecadaram
+      reuniram 58,6% do total declarado. O índice de Gini da arrecadação é
+      0,76, e permanece em 0,706 quando se consideram apenas as candidaturas
+      que registraram alguma receita.
+    </li>
+    <li>
+      <strong>Origem dos recursos.</strong>
+      91% do valor declarado foi recebido por meio dos partidos.
+      Doações de pessoas físicas representam 5,9%, recursos próprios 1,6%
+      e financiamento coletivo 0,23%.
+    </li>
+    <li>
+      <strong>Distribuição por cor ou raça declarada.</strong>
+      Candidaturas de pessoas pretas e pardas correspondem a 46,7% do total
+      e registraram 35,9% dos recursos. Proporcionalmente ao número de
+      candidaturas, a diferença equivale a R$ 322,9 milhões. Em 24 dos 26
+      partidos analisados, a fatia dos recursos ficou abaixo da fatia
+      de candidaturas.
+    </li>
+    <li>
+      <strong>Composição dos gastos por faixa de orçamento.</strong>
+      As candidaturas do quartil superior destinaram proporcionalmente mais
+      a militância, pessoal e veículos. As do quartil inferior registraram
+      fatia maior em impulsionamento digital e em serviços contábeis.
+    </li>
+  </ul>
+
+  <h3>Metodologia</h3>
+  <p>
+    Coleta direta do Portal de Dados Abertos do TSE, tratamento de encoding
+    latin-1, conversão de valores em formato brasileiro e dos marcadores
+    de dado ausente utilizados pelo órgão. Agregação por candidatura e
+    integração de quatro bases pela chave SQ_CANDIDATO. Vice-candidaturas
+    e suplências foram excluídas por não possuírem prestação de contas
+    própria. Os totais foram conferidos manualmente contra o portal
+    oficial de consulta do TSE.
+  </p>
+
+  <p class="proj-tse__tags">
+    <span>Python</span><span>pandas</span><span>matplotlib</span>
+    <span>Parquet</span><span>Google Colab</span>
+  </p>
+
+  <h3>Limitações</h3>
+  <p class="proj-tse__nota">
+    Os dados correspondem à prestação de contas parcial. Como parte
+    relevante do gasto de campanha ocorre nas semanas finais, os valores
+    representam um piso e não o total da eleição. A análise é descritiva:
+    os dados não permitem distinguir em que medida os recursos influenciam
+    o desempenho eleitoral e em que medida a expectativa de desempenho
+    influencia a destinação de recursos. As diferenças observadas entre
+    grupos não são, por si só, evidência de tratamento diferenciado,
+    uma vez que não controlam todos os fatores envolvidos.
+  </p>
+
+  <p class="proj-tse__links">
+    <a href="https://github.com/fabiolagremski" target="_blank" rel="noopener noreferrer">Notebooks e código no GitHub</a>
+    <a href="https://dadosabertos.tse.jus.br/">Fonte: Portal de Dados Abertos do TSE</a>
+  </p>
+
+</section>
+        
       </div>
     </section>
   
@@ -555,11 +840,33 @@ const i18n = {
     "btn-about":             "Sobre mim",
     "about-title":           "Sobre mim",
     "about-welcome":         "Seja muito bem-vindo(a) ao meu portfólio. Conheça a minha trajetória.",
-    "about-p1":              "anos de experiência profissional em operações digitais, e-commerce, análise de indicadores e gestão de processos. Atualmente, sou mestranda em Administração pela PUCPR e estou em transição para a área de Dados, desenvolvendo projetos em Power BI, Python e SQL voltados à análise de negócios e apoio à tomada de decisão.",
+    "about-p1":              "anos de experiência profissional em análise de dados, operações digitais, e-commerce e relacionamento com clientes. Atualmente, sou pesquisadora de mestrado bolsista CAPES na PUCPR e estou em transição para a área de Dados, desenvolvendo projetos em Power BI, Python e SQL voltados à análise de negócios e apoio à tomada de decisão.",
     "about-p2":              "Minha experiência combina visão estratégica, capacidade analítica e pesquisa acadêmica, permitindo transformar dados em insights relevantes para empresas e organizações.",
     "skills-title":          "Principais Habilidades",
     "skill-bi":              "Desenvolvimento de dashboards interativos no Power BI, construção de KPIs e monitoramento de desempenho para diferentes áreas de negócio.",
-    "skill-python":          "Manipulação, limpeza e análise de dados utilizando Python, SQL e bibliotecas voltadas para análise exploratória e automação de processos.",
+    "skill-python":          "Manipulação, limpeza e análise de dados utilizando Python e SQL (SELECT, JOIN, GROUP BY), com controle de versão de projetos via Git e GitHub.",
+    "skill-python-title":    "Python, SQL e Git",
+    "pcd-badge":             "PCD &middot; Visão monocular",
+    "formacao-title":        "Formação acadêmica",
+    "formacao-list":         "<li>• Mestrado em Administração (Marketing) — PUCPR, em andamento</li><li>• MBA em Ciência de Dados e Inteligência Artificial — Uninter, 2026</li><li>• Bacharelado em Administração — Unisecal, 2023</li>",
+    "exp-title":             "Experiência Profissional",
+    "exp1-role":             "Pesquisadora de Mestrado (Bolsista CAPES)",
+    "exp1-company":          " · PUCPR",
+    "exp1-dates":            "04/2025 – Atual",
+    "exp1-list":             "<li>Pesquisa quantitativa e qualitativa aplicada ao comportamento do consumidor</li><li>Estruturação e tratamento de bases de dados para análises estatísticas</li><li>Elaboração de relatórios técnicos e apresentações de resultados</li>",
+    "exp2-role":             "Gestora de E-commerce",
+    "exp2-company":          " · FGM Empreendimentos Digitais",
+    "exp2-dates":            "05/2022 – 01/2024",
+    "exp2-list":             "<li>Análise de indicadores comerciais e operacionais de e-commerce</li><li>Consolidação de dados de diferentes sistemas para relatórios gerenciais</li><li>Monitoramento de KPIs de vendas, atendimento e logística</li>",
+    "exp3-role":             "Coordenadora de CRC (Relacionamento com Clientes)",
+    "exp3-company":          " · Metta Distribuidora",
+    "exp3-dates":            "05/2021 – 04/2022",
+    "exp3-list":             "<li>Administração de dados em CRM, com controle de qualidade das informações</li><li>Acompanhamento de KPIs para avaliação de desempenho e evolução de processos</li>",
+    "exp3-result":           "<strong>Resultado:</strong> implementação da Central de Relacionamento, com aumento estimado de 10% nas vendas por telefone e WhatsApp.",
+    "exp4-role":             "Estagiária Administrativa",
+    "exp4-company":          " · Metta Distribuidora",
+    "exp4-dates":            "07/2020 – 05/2021",
+    "exp4-list":             "<li>Gestão de cadastros e registros administrativos</li><li>Alimentação de sistemas internos e planilhas com dados de rotinas administrativas</li>",
     "skill-research-title":  "Pesquisa e Analytics",
     "skill-research":        "Aplicação de métodos quantitativos, análise de comportamento do consumidor e desenvolvimento de pesquisas acadêmicas baseadas em evidências.",
     "projects-title":        "Projetos Desenvolvidos",
@@ -610,11 +917,33 @@ const i18n = {
     "btn-about":             "About me",
     "about-title":           "About me",
     "about-welcome":         "Welcome to my portfolio. Get to know my journey.",
-    "about-p1":              "years of professional experience in digital operations, e-commerce, performance analysis and process management. I am currently a Master's student in Business Administration at PUCPR and transitioning into Data, building projects in Power BI, Python and SQL focused on business analytics and decision support.",
+    "about-p1":              "years of professional experience in data analysis, digital operations, e-commerce and customer relationship management. I am currently a CAPES-funded Master's researcher at PUCPR and transitioning into Data, building projects in Power BI, Python and SQL focused on business analytics and decision support.",
     "about-p2":              "My background combines strategic vision, analytical capability and academic research — enabling me to turn data into actionable insights for businesses and organizations.",
     "skills-title":          "Core Skills",
     "skill-bi":              "Building interactive Power BI dashboards, defining KPIs and monitoring performance across different business areas.",
-    "skill-python":          "Data manipulation, cleaning and analysis using Python, SQL and libraries for exploratory analysis and process automation.",
+    "skill-python":          "Data manipulation, cleaning and analysis using Python and SQL (SELECT, JOIN, GROUP BY), with project version control through Git and GitHub.",
+    "skill-python-title":    "Python, SQL and Git",
+    "pcd-badge":             "Disabled &middot; Monocular vision",
+    "formacao-title":        "Education",
+    "formacao-list":         "<li>• Master's in Business Administration (Marketing) — PUCPR, in progress</li><li>• MBA in Data Science and Artificial Intelligence — Uninter, 2026</li><li>• Bachelor's in Business Administration — Unisecal, 2023</li>",
+    "exp-title":             "Professional Experience",
+    "exp1-role":             "Master's Researcher (CAPES Scholarship)",
+    "exp1-company":          " · PUCPR",
+    "exp1-dates":            "04/2025 – Present",
+    "exp1-list":             "<li>Quantitative and qualitative research applied to consumer behavior</li><li>Data structuring and processing for statistical analyses</li><li>Technical reports and presentations of findings</li>",
+    "exp2-role":             "E-commerce Manager",
+    "exp2-company":          " · FGM Empreendimentos Digitais",
+    "exp2-dates":            "05/2022 – 01/2024",
+    "exp2-list":             "<li>Analysis of commercial and operational e-commerce indicators</li><li>Consolidation of data from different systems for management reports</li><li>Monitoring of sales, support and logistics KPIs</li>",
+    "exp3-role":             "CRC Coordinator (Customer Relationship)",
+    "exp3-company":          " · Metta Distribuidora",
+    "exp3-dates":            "05/2021 – 04/2022",
+    "exp3-list":             "<li>CRM data administration with quality control of information</li><li>KPI tracking for performance evaluation and process improvement</li>",
+    "exp3-result":           "<strong>Result:</strong> implementation of the Customer Relationship Center, with an estimated 10% increase in phone and WhatsApp sales.",
+    "exp4-role":             "Administrative Intern",
+    "exp4-company":          " · Metta Distribuidora",
+    "exp4-dates":            "07/2020 – 05/2021",
+    "exp4-list":             "<li>Management of administrative records and registrations</li><li>Updating internal systems and spreadsheets with administrative data</li>",
     "skill-research-title":  "Research & Analytics",
     "skill-research":        "Application of quantitative methods, consumer behavior analysis and evidence-based academic research.",
     "projects-title":        "Featured Projects",
